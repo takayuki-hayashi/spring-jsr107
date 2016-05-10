@@ -9,6 +9,8 @@ import javax.cache.expiry.ExpiryPolicy;
 
 public class SampleExpiryFactory implements Factory<ExpiryPolicy> {
 
+	private static final long serialVersionUID = 1L;
+
 	@Override
 	public ExpiryPolicy create() {
 		return new CreatedExpiryPolicy(new Duration(TimeUnit.SECONDS, 10));

@@ -1,7 +1,6 @@
 package hayssh;
 
 import javax.cache.annotation.CacheDefaults;
-import javax.cache.annotation.CacheKey;
 import javax.cache.annotation.CacheResult;
 import javax.inject.Named;
 
@@ -10,7 +9,7 @@ import javax.inject.Named;
 public class DomainRepository {
 
 	@CacheResult
-	public Domain findById(@CacheKey int id){
+	public Domain findById(int id, String hoge, String hoge2){
 		System.out.println("args is " + id);
 		return new Domain(id);
 	}
